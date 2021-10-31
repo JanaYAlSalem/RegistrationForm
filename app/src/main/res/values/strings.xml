@@ -1,0 +1,15 @@
+<resources>
+
+    <string name="app_name">Registration Form</string>
+    <string name="textViewMsg">Please Enter your info</string>
+    <string name="inputName">Name </string>
+    <string name="inputEmail">Email </string>
+    <string name="inputPass1">Password</string>
+    <string name="inputPass2">Repeat password</string>
+    <string name="inputBdate">Birthday Date</string>
+    <string name="radioButtonMale">Male</string>
+    <string name="radioButtonFemale">Female</string>
+    <string name="buttonShow">Registrate</string>
+    <string name="textViewShowInfo">Your info will be show in after registrate</string>
+
+</resources>
