@@ -43,7 +43,8 @@ class MainActivity : AppCompatActivity() {
         if (TextUtils.isEmpty(inputName) == false &&
             TextUtils.isEmpty(inputPass1) == false &&
             TextUtils.isEmpty(inputPass2) == false &&
-            TextUtils.isEmpty(inputBdate)== false ) {
+            TextUtils.isEmpty(inputBdate) == false
+        ) {
 
             if (inputPass1 == inputPass2) {
 
