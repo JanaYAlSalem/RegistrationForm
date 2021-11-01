@@ -3,6 +3,7 @@ package com.example.registrationform
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
+import android.widget.Toast
 import com.example.registrationform.databinding.ActivityMainBinding
 import com.google.android.material.snackbar.Snackbar
 
@@ -45,7 +46,7 @@ class MainActivity : AppCompatActivity() {
             TextUtils.isEmpty(inputPass2) == false &&
             TextUtils.isEmpty(inputBdate) == false
         ) {
-
+            IsEmail()
             if (inputPass1 == inputPass2) {
 
                 LinkXML.textViewShowInfo.setText(
@@ -71,6 +72,15 @@ class MainActivity : AppCompatActivity() {
             Snackbar.LENGTH_SHORT
         ).show()
     }  // end Is Null Info
+
+    private fun IsEmail() {
+        var Email = LinkXML.inputEmail.id.toString()
+        var emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"
+
+        if (Email.trim { it <= ' ' }.matches(emailPattern.toRegex()) == false) {
+            Toast.makeText(applicationContext, "Invalid email address", Toast.LENGTH_SHORT).show()
+        }
+    }// end isEmail
 
     private fun IsSamePassword() {
         Snackbar.make(
