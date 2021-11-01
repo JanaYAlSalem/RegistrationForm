@@ -30,20 +30,12 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        val inputName = LinkXML.inputName.text.toString()
-        val inputPass1 = LinkXML.inputPass1.text.toString()
-        val inputPass2 = LinkXML.inputPass2.text.toString()
-        val inputBdate = LinkXML.inputBdate.text.toString()
-        var Email = LinkXML.inputEmail.text.toString()
+        val inputName = LinkXML.inputNameX.text.toString()
+        val inputPass1 = LinkXML.inputPass1X.text.toString()
+        val inputPass2 = LinkXML.inputPass2X.text.toString()
+        val inputBdate = LinkXML.inputBdateX.text.toString()
+        var Email = LinkXML.inputEmailX.text.toString()
         var emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"
-
-
-//        val df = SimpleDateFormat("dd-mm-yyyy")
-//        val myDate: Date
-//        myDate = df.parse(inputBdate)
-//        val myText = myDate.day.toString() + "-" + myDate.month + "-" + myDate.year + "abcd"
-//
-
 
         val Gender = when (LinkXML.rGroup.checkedRadioButtonId) {
             LinkXML.radioButtonMale.id -> LinkXML.radioButtonMale.text.toString()
@@ -52,10 +44,6 @@ class MainActivity : AppCompatActivity() {
         } // end when to get the Percentage Of Tip
 
 
-//                inputName != null &&
-//                inputPass1 != null &&
-//                inputPass2 != null &&
-//                inputBdate != null
         TextUtils.isEmpty(inputPass1) &&
                 TextUtils.isEmpty(inputPass2) &&
                 TextUtils.isEmpty(inputBdate)
@@ -90,21 +78,17 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun IsNullInfo() {
-        Snackbar.make(
-            findViewById(R.id.MainV),
-            "Sorry some info is empty",
-            Snackbar.LENGTH_SHORT
-        ).show()
+        Snackbar.make( findViewById(R.id.MainV), "Sorry some info is empty", Snackbar.LENGTH_SHORT).show()
     }  // end Is Null Info
 
-    private fun IsEmail() {
-        var Email = LinkXML.inputEmail.text.toString()
-        var emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"
-
-        if (Email.trim { it <= ' ' }.matches(emailPattern.toRegex()) == false) {
-            Toast.makeText(applicationContext, "Invalid email address", Toast.LENGTH_SHORT).show()
-        }
-    }// end isEmail (Never Use)
+//    private fun IsEmail() {
+//        var Email = LinkXML.inputEmail.text.toString()
+//        var emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"
+//
+//        if (Email.trim { it <= ' ' }.matches(emailPattern.toRegex()) == false) {
+//            Toast.makeText(applicationContext, "Invalid email address", Toast.LENGTH_SHORT).show()
+//        }
+//    }// end isEmail (Never Use)
 
     private fun IsSamePassword() {
         Snackbar.make(

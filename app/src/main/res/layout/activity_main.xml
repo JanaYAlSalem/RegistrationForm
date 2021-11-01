@@ -7,6 +7,27 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputName"
+        android:layout_width="248dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/inputName"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMsg">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputNameX"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
     <TextView
         android:id="@+id/textViewMsg"
         android:layout_width="224dp"
@@ -17,9 +38,9 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.008" />
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/inputEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -30,9 +51,17 @@
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputName" />
+        app:layout_constraintTop_toBottomOf="@+id/inputName" >
 
-    <EditText
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputEmailX"
+            android:inputType="textEmailAddress"
+            android:layout_width="247dp"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/inputPass1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -43,9 +72,17 @@
         android:inputType="textPassword"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/inputEmail" >
 
-    <EditText
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputPass1X"
+            android:inputType="textPassword"
+            android:layout_width="239dp"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/inputPass2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -56,9 +93,17 @@
         android:inputType="textPassword"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputPass1" />
+        app:layout_constraintTop_toBottomOf="@+id/inputPass1" >
 
-    <EditText
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputPass2X"
+            android:inputType="textPassword"
+            android:layout_width="242dp"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/inputBdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -69,7 +114,16 @@
         android:inputType="date"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputPass2" />
+        app:layout_constraintTop_toBottomOf="@+id/inputPass2" >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputBdateX"
+            android:inputType="date"
+            android:layout_width="241dp"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <RadioGroup
         android:id="@+id/rGroup"
@@ -100,7 +154,7 @@
         android:layout_width="357dp"
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="4dp"
         android:text="@string/buttonShow"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rGroup" />
@@ -109,23 +163,62 @@
         android:id="@+id/textViewShowInfo"
         android:layout_width="361dp"
         android:layout_height="91dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         android:hint="@string/textViewShowInfo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonShow" />
 
-    <EditText
-        android:id="@+id/inputName"
+    <ImageView
+        android:id="@+id/imgAcc"
+        android:layout_width="42dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="72dp"
+        android:layout_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/inputName"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/account_circle" />
+
+    <ImageView
+        android:id="@+id/imgEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="@string/inputName"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewMsg" />
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintStart_toEndOf="@+id/inputEmail"
+        app:layout_constraintTop_toBottomOf="@+id/imgAcc"
+        app:srcCompat="@drawable/email_circle" />
+
+    <ImageView
+        android:id="@+id/imgKey1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="68dp"
+        app:layout_constraintStart_toEndOf="@+id/inputPass1"
+        app:layout_constraintTop_toBottomOf="@+id/imgEmail"
+        app:srcCompat="@drawable/ic_baseline_vpn_key_24" />
+
+    <ImageView
+        android:id="@+id/imgKey2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintStart_toEndOf="@+id/inputPass2"
+        app:layout_constraintTop_toBottomOf="@+id/imgKey1"
+        app:srcCompat="@drawable/ic_baseline_vpn_key_24" />
+
+    <ImageView
+        android:id="@+id/imgBirthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintStart_toEndOf="@+id/inputBdate"
+        app:layout_constraintTop_toBottomOf="@+id/imgKey2"
+        app:srcCompat="@drawable/ic_baseline_date_range_24" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
