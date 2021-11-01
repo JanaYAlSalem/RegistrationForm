@@ -6,9 +6,14 @@ import android.text.TextUtils
 import android.widget.Toast
 import com.example.registrationform.databinding.ActivityMainBinding
 import com.google.android.material.snackbar.Snackbar
+import java.text.SimpleDateFormat
+import java.util.*
+
 
 class MainActivity : AppCompatActivity() {
     lateinit var LinkXML: ActivityMainBinding // to initializes LinkXML in future time
+    lateinit var calendar: Calendar
+    lateinit var simpleDateFormat: SimpleDateFormat
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,14 +22,28 @@ class MainActivity : AppCompatActivity() {
         LinkXML = ActivityMainBinding.inflate(layoutInflater)  // initializes the binding object
         setContentView(LinkXML.root) // get root of XML
 
+
         LinkXML.buttonShow.setOnClickListener { ShowInformations() } // call fun on button
     }
 
     private fun ShowInformations() {
+
+
+
         val inputName = LinkXML.inputName.text.toString()
         val inputPass1 = LinkXML.inputPass1.text.toString()
         val inputPass2 = LinkXML.inputPass2.text.toString()
         val inputBdate = LinkXML.inputBdate.text.toString()
+        var Email = LinkXML.inputEmail.text.toString()
+        var emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"
+
+
+//        val df = SimpleDateFormat("dd-mm-yyyy")
+//        val myDate: Date
+//        myDate = df.parse(inputBdate)
+//        val myText = myDate.day.toString() + "-" + myDate.month + "-" + myDate.year + "abcd"
+//
+
 
         val Gender = when (LinkXML.rGroup.checkedRadioButtonId) {
             LinkXML.radioButtonMale.id -> LinkXML.radioButtonMale.text.toString()
@@ -44,16 +63,21 @@ class MainActivity : AppCompatActivity() {
         if (TextUtils.isEmpty(inputName) == false &&
             TextUtils.isEmpty(inputPass1) == false &&
             TextUtils.isEmpty(inputPass2) == false &&
-            TextUtils.isEmpty(inputBdate) == false
-        ) {
-            IsEmail()
-            if (inputPass1 == inputPass2) {
+            TextUtils.isEmpty(inputBdate) == false) {
+
+            if(Email.trim { it <= ' ' }.matches(emailPattern.toRegex()) == false){
+                Toast.makeText(applicationContext, "Invalid email address", Toast.LENGTH_SHORT).show()
+            }
+            else if (inputPass1 == inputPass2) {
 
                 LinkXML.textViewShowInfo.setText(
                     "Your Informations is \n" +
                             "Name: $inputName \n" +
+                            "Email: $Email \n" +
                             "Date: $inputBdate \n" +
                             "Gender: $Gender \n"
+
+
                 )
             } // end if pass
             else
@@ -74,13 +98,13 @@ class MainActivity : AppCompatActivity() {
     }  // end Is Null Info
 
     private fun IsEmail() {
-        var Email = LinkXML.inputEmail.id.toString()
+        var Email = LinkXML.inputEmail.text.toString()
         var emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+"
 
         if (Email.trim { it <= ' ' }.matches(emailPattern.toRegex()) == false) {
             Toast.makeText(applicationContext, "Invalid email address", Toast.LENGTH_SHORT).show()
         }
-    }// end isEmail
+    }// end isEmail (Never Use)
 
     private fun IsSamePassword() {
         Snackbar.make(
