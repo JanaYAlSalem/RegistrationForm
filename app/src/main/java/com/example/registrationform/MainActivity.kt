@@ -17,18 +17,14 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
         LinkXML = ActivityMainBinding.inflate(layoutInflater)  // initializes the binding object
         setContentView(LinkXML.root) // get root of XML
-
+//        thems ()
 
         LinkXML.buttonShow.setOnClickListener { ShowInformations() } // call fun on button
     }
 
     private fun ShowInformations() {
-
-
 
         val inputName = LinkXML.inputNameX.text.toString()
         val inputPass1 = LinkXML.inputPass1X.text.toString()
@@ -43,11 +39,6 @@ class MainActivity : AppCompatActivity() {
             else -> "None"
         } // end when to get the Percentage Of Tip
 
-
-        TextUtils.isEmpty(inputPass1) &&
-                TextUtils.isEmpty(inputPass2) &&
-                TextUtils.isEmpty(inputBdate)
-//
         if (TextUtils.isEmpty(inputName) == false &&
             TextUtils.isEmpty(inputPass1) == false &&
             TextUtils.isEmpty(inputPass2) == false &&
@@ -97,5 +88,17 @@ class MainActivity : AppCompatActivity() {
             Snackbar.LENGTH_SHORT
         ).show()
     }  // end Is Same Password
+fun thems (){
+//    val themseseses = LinkXML.Them1.setOnClickListener
+//    LinkXML.Them1.setOnClickListener{
+//        setTheme(R.style.chUser)
+//    }
+//LinkXML.Them2.setOnClickListener{
+//    setTheme(R.style.RegistrationForm)
+//}
+//
+//
+}
+
 
 } // end class

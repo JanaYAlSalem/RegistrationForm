@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">تسجيل الدخول</string>
+    <string name="inputName">الاسم </string>
+    <string name="inputEmail">الايمل </string>
+    <string name="inputPass1">كلمه السر</string>
+    <string name="inputPass2">اعاده كلمه السر</string>
+    <string name="inputBdate">تاريخ الميلاد</string>
+    <string name="radioButtonMale">ذكر</string>
+    <string name="radioButtonFemale">انثى</string>
+    <string name="buttonShow">تسجيل</string>
+    <string name="textViewShowInfo">سوف تعرض البيانات بعد التسجيل</string>
+    <string name="textViewMsg">ادخل بياناتك</string>
+</resources>

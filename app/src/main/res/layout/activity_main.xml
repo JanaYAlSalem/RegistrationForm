@@ -14,15 +14,16 @@
         android:layout_height="55dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="@string/inputName"
-        android:inputType="textPersonName"
+
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewMsg">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/inputNameX"
+            android:ems="10"
+            android:hint="@string/inputName"
+            android:inputType="textPersonName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
@@ -46,15 +47,15 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="18dp"
-        android:ems="10"
-        android:hint="@string/inputEmail"
-        android:inputType="textEmailAddress"
+
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputName" >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/inputEmailX"
+            android:ems="10"
+            android:hint="@string/inputEmail"
             android:inputType="textEmailAddress"
             android:layout_width="247dp"
             android:layout_height="wrap_content" />
@@ -67,15 +68,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
-        android:ems="10"
-        android:hint="@string/inputPass1"
-        android:inputType="textPassword"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputEmail" >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/inputPass1X"
+            android:ems="10"
+            android:hint="@string/inputPass1"
             android:inputType="textPassword"
             android:layout_width="239dp"
             android:layout_height="wrap_content" />
@@ -88,15 +88,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="28dp"
-        android:ems="10"
-        android:hint="@string/inputPass2"
-        android:inputType="textPassword"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputPass1" >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/inputPass2X"
+            android:ems="10"
+            android:hint="@string/inputPass2"
             android:inputType="textPassword"
             android:layout_width="242dp"
             android:layout_height="wrap_content" />
@@ -109,15 +108,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
-        android:ems="10"
-        android:hint="@string/inputBdate"
-        android:inputType="date"
         android:minHeight="48dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/inputPass2" >
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/inputBdateX"
+            android:ems="10"
+            android:hint="@string/inputBdate"
             android:inputType="date"
             android:layout_width="241dp"
             android:layout_height="wrap_content" />
